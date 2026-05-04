@@ -1,0 +1,41 @@
+**OpenRouter LLM CLI**
+A command-line interface (CLI) script built in Dart that connects directly to the OpenRouter API to generate AI text responses.
+
+**Project Description**
+This project was built to demonstrate how to make direct HTTP requests to a third-party AI provider, handle environment variables securely, and process command-line arguments. It accepts a prompt from the user in the terminal, packages it, sends it to OpenRouter using the dio package, and prints the AI's response.
+
+**Prerequisites**
+Before running this project, ensure you have the following installed:
+
+Dart SDK: Download and install Dart
+
+OpenRouter API Key: Create a free account at OpenRouter.ai and generate an API key.
+
+Setup & Configuration
+
+1. Install Dependencies
+   Navigate to the project folder in your terminal and install the required packages (dio and dotenv):
+
+**Bash**
+dart pub get 2. Configure Environment Variables
+For security, this project does not hardcode API keys. You must create a .env file in the root directory of this project.
+
+Create a file named exactly .env and add the following two lines:
+
+**Plaintext**
+OPENROUTER_API_KEY=your_actual_api_key_here
+MODEL_NAME=poolside/laguna-m.1:free
+(Note: The model is currently set to a free tier model for easy testing, but you can change it to any valid OpenRouter model ID).
+
+**How to Run**
+To use the AI, run the script from your terminal and pass your question or prompt in quotation marks as a command-line argument:
+
+Bash
+dart run main.dart "Explain quantum computing in one sentence."
+Example Output:
+
+Plaintext
+Sending prompt to OpenRouter...
+
+--- AI Response ---
+Quantum computing uses the principles of quantum mechanics to process complex information exponentially faster than traditional computers.

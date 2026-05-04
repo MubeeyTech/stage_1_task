@@ -1,0 +1,9 @@
+name: main
+description: Stage One Task
+environment:
+  sdk: "^3.10.0"
+
+dependencies:
+  dio: ^5.9.2
+  dotenv: ^4.2.0
+
